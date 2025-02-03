@@ -1,25 +1,30 @@
 function submitFeedback() {
-    alert('Thank you for your valuable feedback')
-    document.getElementById('userName').innerHTML = username.value;
-    document.getElementById('userAge').innerHTML = age.value;
-    document.getElementById('userEmail').innerHTML = email.value;
-    document.getElementById('userJob').innerHTML = job.value;
-    document.getElementById('userDesignation').innerHTML = designation.value;
-    document.getElementById('userProductChoice').innerHTML = productType.value;
-    document.getElementById('userFeedback').innerHTML = feedback.value;
-    document.getElementById("userExperience").innerHTML = exp.value;
+    const username = document.getElementById('name').value;
+    const age = document.getElementById('age').value;
+    const email = document.getElementById('email').value;
+    const job = document.getElementById('job').value;
+    const designation = document.getElementById('designation').value;
+    const productType = document.getElementById('productType').value;
+    const feedback = document.getElementById('feedbackText').value;
+    const exp = document.getElementById("experience").value;
+
+    document.getElementById('userName').innerHTML = username;
+    document.getElementById('userAge').innerHTML = age;
+    document.getElementById('userEmail').innerHTML = email;
+    document.getElementById('userJob').innerHTML = job;
+    document.getElementById('userDesignation').innerHTML = designation;
+    document.getElementById('userProductChoice').innerHTML = productType;
+    document.getElementById('userFeedback').innerHTML = feedback;
+    document.getElementById("userExperience").innerHTML = exp;
+
     document.getElementById('userInfo').style.display = 'block';
+
+    alert('Thank you for your valuable feedback')
 }
-const username = document.getElementById('name');
-const age = document.getElementById('age');
-const email = document.getElementById('email');
-const job = document.getElementById('job');
-const designation = document.getElementById('designation');
-const productType = document.getElementById('productType');
-const feedback = document.getElementById('feedbackText');
-const exp = document.getElementById("experience");
+
 const submitButton=document.getElementById('submitBtn');
 submitButton.onclick = submitFeedback;
+
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
       submitFeedback();
